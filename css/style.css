@@ -8,6 +8,7 @@
   --purple: #9356DC;
   --pink: #FF79DA;
   --green: #99E2D0;
+  --light_grey: rgba(246, 246, 246, 1);
 }
 
 h1 {
@@ -60,7 +61,7 @@ p {
 body {
   max-width: 375px;
   height: 2252px;
-  background-color: rgb(246, 246, 246);
+  background-color: var(--light_grey);
   margin: 0px;
 }
 
@@ -113,6 +114,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 .explorer .explorer_h2 {
   width: 275px;
@@ -151,4 +153,70 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*************FONCTIONNEMENT*************/
+.fonctionmt {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  padding-top: 48px;
+  background-color: white;
+  gap: 20px;
+  padding-left: 20px;
+}
+.fonctionmt .fonctionmt_text {
+  width: 275px;
+  height: 31px;
+  margin: 0px;
+}
+.fonctionmt .bouton_pastille {
+  position: absolute;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--purple);
+  border-radius: 100%;
+}
+.fonctionmt .bouton_pastille--position1 {
+  top: 510px;
+}
+.fonctionmt .bouton_pastille--position2 {
+  top: 602px;
+}
+.fonctionmt .bouton_pastille--position3 {
+  top: 695px;
+}
+.fonctionmt .bouton_pastille--number {
+  color: white;
+  width: 15px;
+  margin: auto;
+  margin-top: 2px;
+  text-align: center;
+}
+.fonctionmt .fonctionmt_bouton {
+  display: flex;
+  flex-direction: row;
+  width: 322px;
+  height: 72px;
+  border-radius: 20px;
+  background-color: var(--light_grey);
+}
+.fonctionmt .fa-solid {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.fonctionmt .bouton_text--style {
+  width: 211px;
+  height: 15px;
+  margin: auto;
+}
+.fonctionmt .fa-store {
+  color: var(--purple);
+}
+
+/*************RESTAURANTS*************/
+.restaurants {
+  height: 1226px;
 }/*# sourceMappingURL=style.css.map */
