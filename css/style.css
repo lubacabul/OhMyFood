@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Archivo", sans-serif;
   font-family: "Manrope", sans-serif;
@@ -7,4 +8,143 @@
   --purple: #9356DC;
   --pink: #FF79DA;
   --green: #99E2D0;
+}
+
+h1 {
+  /*En-tête des pages (nom du restaurant)*/
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 44px;
+}
+
+h2 {
+  /*Titre des section*/
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+h3 {
+  /*Titre des cards*/
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+h4 {
+  /*Textes des boutons*/
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+h5 {
+  /*Sous-titre des cards*/
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+body {
+  max-width: 375px;
+  height: 2252px;
+  background-color: rgb(246, 246, 246);
+  margin: 0px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 375px;
+  align-items: center;
+}
+
+/*************HEADER*************/
+.header_logo {
+  width: 375px;
+  height: 63px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.header_logo .header_logo--bold {
+  font-weight: bold;
+}
+.header_logo .header_logo--center {
+  margin: auto;
+}
+
+.header_searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 17px;
+  padding-left: 100px;
+  background-color: rgb(234, 234, 234);
+}
+.header_searchbar .header_searchbar--background {
+  border: none;
+  background-color: rgb(234, 234, 234);
+}
+.header_searchbar .header_searchbar--text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: black;
+}
+
+/*************EXPLORER*************/
+.explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+}
+.explorer .explorer_h2 {
+  width: 275px;
+  height: 68px;
+  text-align: center;
+  margin: auto;
+}
+.explorer .explorer_p {
+  width: 315px;
+  height: 46px;
+  margin: auto;
+  text-align: center;
+}
+.explorer .explorer_bouton {
+  width: 218px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+}
+.explorer .explorer_bouton .explorer_bouton--style {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 29%, rgb(255, 121, 218) 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.explorer .explorer_bouton .explorer_bouton--text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
