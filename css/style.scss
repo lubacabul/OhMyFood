@@ -239,10 +239,23 @@ body{
         }
     }
 
-        /*************RESTAURANTS*************/
+/*************RESTAURANTS*************/
 
         .restaurants{
             height: 1226px;
 
         }
+
+
+
+/*************FOOTER*************/
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 186px ;
+        padding: 22px 25px 22px 25px;
+        gap: 16px;
+        background-color: black;
+    }     
 
