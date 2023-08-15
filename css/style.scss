@@ -303,12 +303,7 @@ body{
                     margin-left: 10px;
                 }
             }
-
-
-
         }
-
-
 
 /*************FOOTER*************/
 
@@ -319,5 +314,51 @@ body{
         padding: 22px 25px 22px 25px;
         gap: 16px;
         background-color: black;
-    }     
+
+        .footer_logo--color {
+            color: white;
+            margin: 0px;
+        }
+
+        .footer_link {
+            display: flex;
+            flex-direction: row;
+            width: 190px;
+            height: 19px;
+            padding-bottom: 6px;
+
+            &--color {
+                color: white;
+            }
+        }
+        .footer_link h4{
+            margin: 0px;
+        }
+    }   
+    
+    .footer ul{
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+
+    .footer li{
+        list-style: none;
+        padding-left: 0px;
+        padding-bottom: 6px;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer_h4--margin{
+        margin: 0px;
+    }
+
+    
+
+
+
+    
 
