@@ -159,7 +159,7 @@ body {
 .fonctionmt {
   display: flex;
   flex-direction: column;
-  height: 440px;
+  height: 400px;
   padding-top: 48px;
   background-color: white;
   gap: 20px;
@@ -218,7 +218,59 @@ body {
 
 /*************RESTAURANTS*************/
 .restaurants {
-  height: 1226px;
+  display: flex;
+  flex-direction: column;
+  height: 1176px;
+  padding-left: 20px;
+  padding-top: 50px;
+  gap: 18px;
+}
+.restaurants .restaurants_title {
+  margin: 0px;
+}
+.restaurants .restaurants_card {
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.restaurants .restaurants_card img {
+  width: 340px;
+  height: 180px;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants .restaurants_card a {
+  text-decoration: none;
+  color: black;
+}
+.restaurants .card_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 300px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.restaurants .card_title {
+  margin: 0px;
+}
+.restaurants .card_subtitle {
+  margin: 0px;
+}
+.restaurants .card_heart {
+  width: 26px;
+  height: 22px;
+  margin: 1px;
+}
+.restaurants .card_heart--size {
+  width: 26px;
+  height: 22px;
+  margin-left: 10px;
 }
 
 /*************FOOTER*************/
