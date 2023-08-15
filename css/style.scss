@@ -305,6 +305,24 @@ body{
             }
         }
 
+        .card_pastille {
+            position: absolute;
+            left: 268px;
+            width: 80px;
+            height: 29px;
+            background-color: var(--green);
+            margin-top: 10px;
+            border-radius: 2px;
+
+            &--text {
+                color: rgba(0, 135, 102, 1);
+                width: 61px;
+                margin:auto;
+                margin-top: 5px;
+                text-align: center;
+            }
+        }
+
 /*************FOOTER*************/
 
     .footer{

@@ -273,6 +273,23 @@ body {
   margin-left: 10px;
 }
 
+.card_pastille {
+  position: absolute;
+  left: 268px;
+  width: 80px;
+  height: 29px;
+  background-color: var(--green);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.card_pastille--text {
+  color: rgb(0, 135, 102);
+  width: 61px;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+}
+
 /*************FOOTER*************/
 .footer {
   display: flex;
