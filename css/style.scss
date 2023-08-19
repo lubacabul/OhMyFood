@@ -395,11 +395,6 @@ body{
     position: absolute;
     top: 283px;
 }
-    
-
-
-
-
 
 .menu_entete {
     display: flex;
@@ -421,6 +416,24 @@ body{
         top: 45px;
         position: absolute;
     }
+}
+
+.menu_step {
+    padding-left: 20px;
+
+    .step_titre {
+        margin-bottom: 5px;
+    }
+    
+    .step_trait_horizontal{
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        width: 40px;
+        height: 2px;
+        background-color:var(--green)
+    }
+    
 }
 
 .commander_bouton {
