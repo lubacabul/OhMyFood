@@ -78,15 +78,9 @@ body{
     height: 63px;
     background-color: white;
     display: flex;
+    justify-content: center;
     align-items: center;
 
-        .header_logo--bold{
-            font-weight: bold;   
-        }
-
-        .header_logo--center{
-            margin: auto;        
-        }
 }
 
 .header_searchbar {
@@ -333,9 +327,11 @@ body{
         gap: 16px;
         background-color: black;
 
-        .footer_logo--color {
-            color: white;
-            margin: 0px;
+        .footer_logo {
+            justify-content: left;
+            width: 137px;
+            height: 27px;
+
         }
 
         .footer_link {
@@ -356,7 +352,7 @@ body{
     
     .footer ul{
         padding-left: 0px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .footer li{
@@ -377,6 +373,15 @@ body{
     
 
 /*************PAGES DES RESTAURANTS*************/
+
+.menu_entete {
+    display: flex;
+    flex-direction: row;
+
+    .menu_entête_nom{
+
+    }
+}
 
 .commander_bouton {
     width: 186px;
