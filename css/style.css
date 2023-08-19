@@ -66,13 +66,13 @@ p {
 body {
   max-width: 375px;
   height: 2252px;
-  background-color: var(--light_grey);
+  background-color: white;
   margin: auto;
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 375px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: white;
 }
@@ -297,6 +297,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 186px;
+  width: 325px;
   padding: 22px 25px 22px 25px;
   gap: 16px;
   background-color: black;
@@ -341,41 +342,47 @@ body {
 }
 
 /*************PAGES DES RESTAURANTS*************/
+.page_restaurant {
+  display: flex;
+  flex-direction: column;
+}
+
 .bloc_image {
+  display: flex;
+  flex-direction: column;
   width: 375px;
   height: 275px;
+  background-image: url("https://media.istockphoto.com/id/944478708/fr/photo/couple-d%C3%A9jeuner-avec-salade-fra%C3%AEche-et-amuse-gueules.webp?s=1024x1024&w=is&k=20&c=NzWeYYWqThPjxcUyqBJK0pt7vvFNYrD0m3k68IHZy3w=");
 }
 .bloc_image .image--size {
   width: 375px;
   height: 275px;
 }
-
-.menu {
-  width: 375px;
-  height: 1306px;
-  border-radius: 40px 40px 0px 0px;
+.bloc_image .bloc_image_txt {
   background-color: var(--light_grey);
-  position: absolute;
-  top: 283px;
+  top: 215px;
+  position: relative;
+  border-radius: 40px 40px 0px 0px;
 }
-
-.menu_entete {
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.menu_entete .menu_entete_titre {
+.bloc_image .bloc_image_titre {
   padding-left: 20px;
+  margin-top: 30px;
 }
-.menu_entete .menu_entete_heart--size {
+.bloc_image .bloc_image_heart--size {
   width: 22px;
   height: 21px;
 }
-.menu_entete .menu_entete_heart--position {
+.bloc_image .bloc_image_heart--position {
   left: 312px;
   top: 45px;
   position: absolute;
+}
+
+.menu {
+  width: 375px;
+  height: auto;
+  background-color: var(--light_grey);
+  padding-bottom: 50px;
 }
 
 .menu_step {
@@ -383,6 +390,7 @@ body {
   margin: auto;
   display: grid;
   row-gap: 12px;
+  margin-top: 30px;
 }
 .menu_step .step_titre {
   margin-bottom: 5px;
@@ -407,7 +415,7 @@ body {
 .menu_step .card_plat .card_plat_text {
   display: grid;
   row-gap: 5px;
-  padding: 15px;
+  padding: 15px 0px 15px 15px;
 }
 .menu_step .card_plat .card_plat_prix--position {
   position: relative;
