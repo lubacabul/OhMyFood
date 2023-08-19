@@ -17,6 +17,7 @@ h1 {
     font-size: 30px;
     font-style: italic;
     line-height: 44px;
+    margin: 0px;
 }
 
 h2 {
@@ -25,6 +26,7 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
+    margin: 0px;
 }
 
 h3 {
@@ -33,6 +35,7 @@ h3 {
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
+    margin: 0px;
 }
 
 h4 {
@@ -41,6 +44,7 @@ h4 {
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
+    margin: 0px;
 }
 
 h5 {
@@ -49,6 +53,7 @@ h5 {
     font-size: 17px;
     font-weight: 300;
     line-height: 20px;
+    margin: 0px;
 }
 
 p {
@@ -400,9 +405,9 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 30px;
+    margin-bottom: 30px;
 
     .menu_entete_titre{
-        margin: 0px;
         padding-left: 20px;
     }
 
@@ -427,13 +432,26 @@ body{
     
     .step_trait_horizontal{
         padding: 0px;
-        margin: 0px;
+        margin-bottom: 12px;
         border: none;
         width: 40px;
         height: 2px;
         background-color:var(--green)
     }
     
+    .card_plat{
+        display: flex;
+        flex-direction: row;
+        width: 349px;
+        height: 69px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+        .card_plat_text{
+            padding: 15px
+        }
+    }
 }
 
 .commander_bouton {
