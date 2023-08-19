@@ -243,87 +243,87 @@ body{
 
 /*************RESTAURANTS*************/
 
-        .restaurants{
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    height: 1176px;
+    padding-left: 20px;
+    padding-top: 50px;
+    gap: 18px;
+
+        .restaurants_title {
+             margin: 0px;
+        }
+
+        .restaurants_card{
+            width: 340px;
+            height: 251px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurants_card img{
+            width: 340px;
+            height: 180px;
+            border-radius: 15px 15px 0px 0px;
+            object-fit: cover;
+        }
+
+        .restaurants_card a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .card_content {
             display: flex;
-            flex-direction: column;
-            height: 1176px;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 60px;
+            width: 300px;
             padding-left: 20px;
-            padding-top: 50px;
-            gap: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 
-            .restaurants_title {
-                margin: 0px;
-            }
+        .card_title {
+            margin: 0px;
+        }
 
-            .restaurants_card{
-                width: 340px;
-                height: 251px;
-                border-radius: 15px;
-                background-color: rgba(255, 255, 255, 1);
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-            }
+        .card_subtitle {
+            margin: 0px;
+        }
 
-            .restaurants_card img{
-                width: 340px;
-                height: 180px;
-                border-radius: 15px 15px 0px 0px;
-                object-fit: cover;
-            }
-
-            .restaurants_card a {
-                text-decoration: none;
-                color: black;
-            }
-
-            .card_content {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                height: 60px;
-                width: 300px;
-                padding-left: 20px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-
-            .card_title {
-                margin: 0px;
-            }
-
-            .card_subtitle {
-                margin: 0px;
-            }
-
-            .card_heart {
-                width: 26px;
-                height: 22px;
-                margin: 1px;
+        .card_heart {
+            width: 26px;
+            height: 22px;
+            margin: 1px;
 
                 &--size{
                     width: 26px;
                     height: 22px;
                     margin-left: 10px;
                 }
-            }
         }
+}
 
-        .card_pastille {
-            position: absolute;
-            left: 268px;
-            width: 80px;
-            height: 29px;
-            background-color: var(--green);
-            margin-top: 10px;
-            border-radius: 2px;
+.card_pastille {
+    position: absolute;
+    left: 268px;
+    width: 80px;
+    height: 29px;
+    background-color: var(--green);
+    margin-top: 10px;
+    border-radius: 2px;
 
-            &--text {
-                color: rgba(0, 135, 102, 1);
-                width: 61px;
-                margin:auto;
-                margin-top: 5px;
-                text-align: center;
-            }
+        &--text {
+            color: rgba(0, 135, 102, 1);
+            width: 61px;
+            margin:auto;
+            margin-top: 5px;
+            text-align: center;
         }
+}
 
 /*************FOOTER*************/
 
@@ -424,7 +424,11 @@ body{
 }
 
 .menu_step {
-    padding-left: 20px;
+    width: 349px;
+    margin: auto;
+    display: grid;
+    row-gap: 12px;
+    
 
     .step_titre {
         margin-bottom: 5px;
@@ -440,8 +444,8 @@ body{
     }
     
     .card_plat{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns:300px 49px;
         width: 349px;
         height: 69px;
         border-radius: 15px;
@@ -449,10 +453,21 @@ body{
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
         .card_plat_text{
+            display: grid;
+            row-gap: 5px;
             padding: 15px
         }
+
+        .card_plat_prix--position {
+            position: relative;
+                text-align: center;
+                top: 40px
+        }
+        
     }
 }
+
+
 
 .commander_bouton {
     width: 186px;
