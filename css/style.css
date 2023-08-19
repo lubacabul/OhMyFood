@@ -62,13 +62,14 @@ body {
   max-width: 375px;
   height: 2252px;
   background-color: var(--light_grey);
-  margin: 0px;
+  margin: auto;
 }
 
 .main-container {
   display: grid;
   grid-template-columns: 375px;
   align-items: center;
+  background-color: white;
 }
 
 /*************HEADER*************/
@@ -110,6 +111,7 @@ body {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: var(--light_grey);
 }
 .explorer .explorer_h2 {
   width: 275px;
@@ -334,10 +336,43 @@ body {
 }
 
 /*************PAGES DES RESTAURANTS*************/
+.bloc_image {
+  width: 375px;
+  height: 275px;
+}
+.bloc_image .image--size {
+  width: 375px;
+  height: 275px;
+}
+
+.menu {
+  width: 375px;
+  height: 1306px;
+  border-radius: 40px 40px 0px 0px;
+  background-color: var(--light_grey);
+  position: absolute;
+  top: 283px;
+}
+
 .menu_entete {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
+.menu_entete .menu_entete_titre {
+  margin: 0px;
+  padding-left: 20px;
+}
+.menu_entete .menu_entete_heart--size {
+  width: 22px;
+  height: 21px;
+}
+.menu_entete .menu_entete_heart--position {
+  left: 312px;
+  top: 45px;
+  position: absolute;
+}
+
 .commander_bouton {
   width: 186px;
   height: 50px;
