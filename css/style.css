@@ -100,11 +100,11 @@ main {
   padding-left: 100px;
   background-color: rgb(234, 234, 234);
 }
-.header_searchbar .header_searchbar--background {
+.header_searchbar--background {
   border: none;
   background-color: rgb(234, 234, 234);
 }
-.header_searchbar .header_searchbar--text {
+.header_searchbar--text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -122,13 +122,13 @@ main {
   padding-bottom: 40px;
   background-color: var(--light_grey);
 }
-.explorer .explorer_h2 {
+.explorer_h2 {
   width: 275px;
   height: 68px;
   text-align: center;
   margin: auto;
 }
-.explorer .explorer_p {
+.explorer_p {
   width: 315px;
   height: 46px;
   margin: auto;
@@ -140,7 +140,7 @@ main {
   margin: auto;
   margin-top: 30px;
 }
-.explorer .explorer_bouton .explorer_bouton--style {
+.explorer .explorer_bouton--style {
   display: inline-block;
   width: 218px;
   height: 50px;
@@ -149,7 +149,7 @@ main {
   background: linear-gradient(0deg, rgb(147, 86, 220) 29%, rgb(255, 121, 218) 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.explorer .explorer_bouton .explorer_bouton--text {
+.explorer .explorer_bouton--text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -171,10 +171,9 @@ main {
   gap: 20px;
   padding-left: 20px;
 }
-.fonctionmt .fonctionmt_text {
+.fonctionmt_text {
   width: 275px;
   height: 31px;
-  margin: 0px;
 }
 .fonctionmt .bouton_pastille {
   position: absolute;
@@ -230,9 +229,17 @@ main {
   padding-left: 20px;
   padding-top: 50px;
   gap: 18px;
-}
-.restaurants .restaurants_title {
-  margin: 0px;
+  /**        .restaurants_title {
+               margin: 0px;
+          }
+  **/
+  /**.card_title {
+      margin: 0px;
+  }
+
+  .card_subtitle {
+      margin: 0px;
+  }**/
 }
 .restaurants .restaurants_card {
   width: 340px;
@@ -261,12 +268,6 @@ main {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.restaurants .card_title {
-  margin: 0px;
-}
-.restaurants .card_subtitle {
-  margin: 0px;
 }
 .restaurants .card_heart {
   width: 26px;
@@ -321,28 +322,18 @@ main {
 .footer .footer_link--color {
   color: white;
 }
-.footer .footer_link h4 {
-  margin: 0px;
-}
-
-.footer ul {
+.footer .footer ul {
   padding-left: 0px;
   margin-top: 10px;
 }
-
-.footer li {
+.footer .footer li {
   list-style: none;
   padding-left: 0px;
   padding-bottom: 6px;
 }
-
-.footer a {
+.footer .footer a {
   text-decoration: none;
   color: white;
-}
-
-.footer_h4--margin {
-  margin: 0px;
 }
 
 /*************PAGES DES RESTAURANTS*************/
@@ -358,22 +349,21 @@ main {
   height: 275px;
   background-image: url("https://media.istockphoto.com/id/944478708/fr/photo/couple-d%C3%A9jeuner-avec-salade-fra%C3%AEche-et-amuse-gueules.webp?s=1024x1024&w=is&k=20&c=NzWeYYWqThPjxcUyqBJK0pt7vvFNYrD0m3k68IHZy3w=");
 }
-
 .bloc_image_txt {
   background-color: var(--light_grey);
   top: 215px;
   position: relative;
   border-radius: 40px 40px 0px 0px;
 }
-.bloc_image_txt .bloc_image_titre {
+.bloc_image_titre {
   padding-left: 20px;
-  margin-top: 30px;
+  padding-top: 30px;
 }
-.bloc_image_txt .bloc_image_heart--size {
+.bloc_image_heart--size {
   width: 22px;
   height: 21px;
 }
-.bloc_image_txt .bloc_image_heart--position {
+.bloc_image_heart--position {
   left: 312px;
   top: 45px;
   position: absolute;
@@ -430,7 +420,7 @@ main {
   margin: auto;
   margin-top: 30px;
 }
-.commander_bouton .commander_bouton--style {
+.commander_bouton--style {
   display: inline-block;
   width: 186px;
   height: 50px;
@@ -439,7 +429,7 @@ main {
   background: linear-gradient(0deg, rgb(147, 86, 220) 29%, rgb(255, 121, 218) 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.commander_bouton .commander_bouton--text {
+.commander_bouton--text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;

@@ -103,12 +103,12 @@ main{
     padding-left:100px;
     background-color: rgba(234, 234, 234, 1);
 
-        .header_searchbar--background {
+        &--background {
             border: none;
             background-color: rgba(234, 234, 234, 1);
         }
 
-        .header_searchbar--text{
+        &--text{
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
@@ -128,14 +128,14 @@ main{
     padding-bottom: 40px;
     background-color: var(--light_grey);
 
-        .explorer_h2 {
+        &_h2 {
             width: 275px;
             height: 68px;
             text-align: center;
             margin: auto;
         }
 
-        .explorer_p{
+        &_p{
             width: 315px;
             height: 46px;
             margin: auto;
@@ -149,7 +149,7 @@ main{
             margin-top: 30px;
 
             
-            .explorer_bouton--style{
+            &--style{
                 display: inline-block;
                 width: 218px;
                 height: 50px;
@@ -159,7 +159,7 @@ main{
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             }
 
-            .explorer_bouton--text{
+            &--text{
                font-family: Roboto;
                font-size: 16px;
                font-weight: 500;
@@ -184,10 +184,9 @@ main{
         gap: 20px;
         padding-left: 20px;
 
-        .fonctionmt_text{
+        &_text{
             width: 275px;
             height: 31px;
-            margin: 0px;
         }
 
         .bouton_pastille{
@@ -255,10 +254,10 @@ main{
     padding-top: 50px;
     gap: 18px;
 
-        .restaurants_title {
+/**        .restaurants_title {
              margin: 0px;
         }
-
+**/
         .restaurants_card{
             width: 340px;
             height: 251px;
@@ -290,13 +289,13 @@ main{
             padding-bottom: 10px;
         }
 
-        .card_title {
+        /**.card_title {
             margin: 0px;
         }
 
         .card_subtitle {
             margin: 0px;
-        }
+        }**/
 
         .card_heart {
             width: 26px;
@@ -331,37 +330,33 @@ main{
 
 /*************FOOTER*************/
 
-    .footer{
-        display: flex;
-        flex-direction: column;
-        height: 186px ;
-        width: 325px;
-        padding: 22px 25px 22px 25px;
-        gap: 16px;
-        background-color: black;
+.footer{
+    display: flex;
+    flex-direction: column;
+    height: 186px ;
+    width: 325px;
+    padding: 22px 25px 22px 25px;
+    gap: 16px;
+    background-color: black;
 
-        .footer_logo {
-            justify-content: left;
-            width: 137px;
-            height: 27px;
+    .footer_logo {
+        justify-content: left;
+        width: 137px;
+        height: 27px;
 
         }
 
-        .footer_link {
-            display: flex;
-            flex-direction: row;
-            width: 190px;
-            height: 19px;
-            padding-bottom: 6px;
+    .footer_link {
+        display: flex;
+        flex-direction: row;
+        width: 190px;
+        height: 19px;
+        padding-bottom: 6px;
 
             &--color {
                 color: white;
             }
-        }
-        .footer_link h4{
-            margin: 0px;
-        }
-    }   
+    }     
     
     .footer ul{
         padding-left: 0px;
@@ -378,12 +373,7 @@ main{
         text-decoration: none;
         color: white;
     }
-
-    .footer_h4--margin{
-        margin: 0px;
-    }
-
-    
+}
 
 /*************PAGES DES RESTAURANTS*************/
 
@@ -399,25 +389,25 @@ main{
     height: 275px;
     background-image: url('https://media.istockphoto.com/id/944478708/fr/photo/couple-d%C3%A9jeuner-avec-salade-fra%C3%AEche-et-amuse-gueules.webp?s=1024x1024&w=is&k=20&c=NzWeYYWqThPjxcUyqBJK0pt7vvFNYrD0m3k68IHZy3w=');
 
+   
+    &_txt{
+        background-color: var(--light_grey);
+        top: 215px;
+        position: relative;
+        border-radius: 40px 40px 0px 0px;
     }
-.bloc_image_txt{
-    background-color: var(--light_grey);
-    top: 215px;
-    position: relative;
-    border-radius: 40px 40px 0px 0px;
 
-
-    .bloc_image_titre{
+    &_titre{
         padding-left: 20px;
-        margin-top: 30px;
+        padding-top: 30px;
     }
 
-    .bloc_image_heart--size{
+    &_heart--size{
         width: 22px;
         height: 21px;
     }
 
-    .bloc_image_heart--position{
+    &_heart--position{
         left: 312px;
         top: 45px;
         position: absolute;
@@ -482,7 +472,7 @@ main{
     margin-top: 30px;
 
     
-    .commander_bouton--style{
+    &--style{
         display: inline-block;
         width: 186px;
         height: 50px;
@@ -492,7 +482,7 @@ main{
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
-    .commander_bouton--text{
+    &--text{
        font-family: Roboto;
        font-size: 16px;
        font-weight: 500;
