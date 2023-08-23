@@ -10,8 +10,6 @@
     --light_grey : rgba(246, 246, 246, 1);
     --gradient: linear-gradient(0deg, rgba(147,86,220,1) 29%, rgba(255,121,218,1) 100%)
 }
-$purple: #9356DC;
-$pink: #FF79DA;
 
 h1 {
 /*En-tête des pages (nom du restaurant)*/
@@ -288,10 +286,6 @@ main{
     padding-top: 50px;
     gap: 18px;
 
-/**        .restaurants_title {
-             margin: 0px;
-        }
-**/
         .restaurants_card{
             width: 340px;
             height: 251px;
@@ -322,14 +316,6 @@ main{
             padding-top: 10px;
             padding-bottom: 10px;
         }
-
-        /**.card_title {
-            margin: 0px;
-        }
-
-        .card_subtitle {
-            margin: 0px;
-        }**/
 
         .card_heart {
             width: 26px;
