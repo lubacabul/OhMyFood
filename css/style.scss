@@ -407,19 +407,18 @@ main{
     flex-direction: column;
 }
 
-.bloc_image{
+.bloc_id{
     display: flex;
     flex-direction: column;
     width: 375px;
     height: 275px;
-    background-image: url('https://media.istockphoto.com/id/944478708/fr/photo/couple-d%C3%A9jeuner-avec-salade-fra%C3%AEche-et-amuse-gueules.webp?s=1024x1024&w=is&k=20&c=NzWeYYWqThPjxcUyqBJK0pt7vvFNYrD0m3k68IHZy3w=');
-
-   
+    
     &_txt{
         background-color: var(--light_grey);
         top: 215px;
         position: relative;
         border-radius: 40px 40px 0px 0px;
+        z-index: 1;
     }
 
     &_titre{
@@ -427,16 +426,22 @@ main{
         padding-top: 30px;
     }
 
-    &_heart--size{
-        width: 22px;
-        height: 21px;
-    }
-
     &_heart--position{
         left: 312px;
-        top: 45px;
+        top: 50px;
         position: absolute;
     }
+
+    .bloc_id_image{
+        position: absolute;
+        top: 65px;
+    }
+
+    .bloc_id_image img{
+        width: 375px;
+        height: 275px;
+    }
+
 }
 
 .menu {
