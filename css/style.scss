@@ -93,6 +93,13 @@ main{
 
 }
 
+.header_arrow{
+    padding-top: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
 .header_searchbar {
     display: flex;
     flex-direction: row;
