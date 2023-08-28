@@ -91,6 +91,13 @@ main {
   align-items: center;
 }
 
+.header_arrow {
+  padding-top: 20px;
+  position: absolute;
+  top: 10px;
+  padding-left: 20px;
+}
+
 .header_searchbar {
   display: flex;
   flex-direction: row;
@@ -257,17 +264,6 @@ main {
   padding-left: 20px;
   padding-top: 50px;
   gap: 18px;
-  /**        .restaurants_title {
-               margin: 0px;
-          }
-  **/
-  /**.card_title {
-      margin: 0px;
-  }
-
-  .card_subtitle {
-      margin: 0px;
-  }**/
 }
 .restaurants .restaurants_card {
   width: 340px;
@@ -340,6 +336,10 @@ main {
   width: 137px;
   height: 27px;
 }
+.footer .footer_fa {
+  width: 24px;
+  height: 13px;
+}
 .footer .footer_link {
   display: flex;
   flex-direction: row;
@@ -370,31 +370,35 @@ main {
   flex-direction: column;
 }
 
-.bloc_image {
+.bloc_id {
   display: flex;
   flex-direction: column;
   width: 375px;
   height: 275px;
-  background-image: url("https://media.istockphoto.com/id/944478708/fr/photo/couple-d%C3%A9jeuner-avec-salade-fra%C3%AEche-et-amuse-gueules.webp?s=1024x1024&w=is&k=20&c=NzWeYYWqThPjxcUyqBJK0pt7vvFNYrD0m3k68IHZy3w=");
 }
-.bloc_image_txt {
+.bloc_id_txt {
   background-color: var(--light_grey);
   top: 215px;
   position: relative;
   border-radius: 40px 40px 0px 0px;
+  z-index: 1;
 }
-.bloc_image_titre {
+.bloc_id_titre {
   padding-left: 20px;
   padding-top: 30px;
 }
-.bloc_image_heart--size {
-  width: 22px;
-  height: 21px;
-}
-.bloc_image_heart--position {
+.bloc_id_heart--position {
   left: 312px;
-  top: 45px;
+  top: 50px;
   position: absolute;
+}
+.bloc_id .bloc_id_image {
+  position: absolute;
+  top: 65px;
+}
+.bloc_id .bloc_id_image img {
+  width: 375px;
+  height: 275px;
 }
 
 .menu {
@@ -405,9 +409,10 @@ main {
 }
 
 .menu_step {
+  display: flex;
+  flex-direction: column;
   width: 349px;
   margin: auto;
-  display: grid;
   row-gap: 12px;
   margin-top: 30px;
 }
@@ -422,26 +427,91 @@ main {
   height: 2px;
   background-color: var(--green);
 }
-.menu_step .card_plat {
-  display: grid;
-  grid-template-columns: 300px 49px;
+
+.card_plat {
+  display: flex;
+  flex-direction: row;
   width: 349px;
   height: 69px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu_step .card_plat .card_plat_text {
-  display: grid;
+.card_plat .card_plat_text {
+  display: flex;
+  flex-direction: column;
   row-gap: 5px;
   padding: 15px 0px 15px 15px;
 }
-.menu_step .card_plat .card_plat_prix--position {
+.card_plat .card_plat_prix--position {
   position: relative;
-  text-align: center;
-  top: 40px;
+  width: 80px;
+  height: 35px;
+  padding-top: 27px;
+  margin-left: 30px;
+  text-align: right;
+  padding-right: 15px;
 }
 
+.menu_step {
+  animation: presentation 0.8s linear forwards;
+}
+
+.card_plat:hover .check {
+  animation: slide 0.5s linear forwards;
+}
+
+.card_plat:hover .check > i {
+  animation: rotation 0.5s linear forwards;
+}
+
+.check {
+  display: flex;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  opacity: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.check i {
+  align-items: center;
+  color: white;
+  font-size: 25px;
+}
+
+.carte:hover .check {
+  animation: slide 0.5s linear forwards;
+}
+
+.carte:hover .check > i {
+  animation: rotation 0.5s linear forwards;
+}
+
+@keyframes slide {
+  0% {
+    margin-right: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 180px;
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .button_commander--taille {
   width: 186px;
   height: 50px;
