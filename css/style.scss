@@ -456,6 +456,9 @@ main{
         width: 375px;
         height: 275px;
     }
+.heart_checkbox{
+    width: 50px;
+}
 
 .heart_checkbox i{
     left: 312px;
@@ -467,10 +470,15 @@ main{
 .heart input, 
 .heart i {
   position: absolute;
+  width: 50px;
+  height: 50px;
 }
 
 .checked {
-    color: pink;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+
 }
   
   .heart_checkbox input[type="checkbox"],
@@ -502,9 +510,29 @@ main{
     margin: auto;
     row-gap: 12px;
     margin-top: 30px;
+  }
+
+
+.translate {
+    animation: presentation 0.8s linear forwards;
+}
+
+      @keyframes presentation {
+    from {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   
     .step_titre {
         margin-bottom: 5px;
+        transform: scale(1);
+        animation-name: slide;
+        animation-duration: 300ms;
     }
     
     .step_trait_horizontal{
@@ -515,7 +543,6 @@ main{
         height: 2px;
         background-color:var(--green)
     }
-  }
   
   .card_plat{
     display: flex;
@@ -528,14 +555,28 @@ main{
     justify-content: space-between;
     white-space: nowrap;
     text-overflow: ellipsis;
-     overflow: hidden;
+    overflow: hidden;
+    animation: apparition_plat 500ms linear forwards;
+  } 
+
+  
+  
+  @keyframes apparition_plat {
+    0% {
+            transform: scale(0);
+            opacity: 0;
+  }
+    100% {
+            transform: scale(1);
+            opacity: 1;    
+    }
+}
   
     .card_plat_text{
         display: flex;
         flex-direction: column;
         row-gap: 5px;
         padding: 15px 0px 15px 15px;
-   
     }
   
     .card_plat_prix--position {
@@ -547,20 +588,8 @@ main{
         text-align: right;
         padding-right: 15px;
     }
+   
   
-  }
-  
-  .menu_step {
-            animation: presentation 0.8s linear forwards;
-  }
-  
-  .card_plat:hover .check {
-            animation: slide 0.5s linear forwards;
-  }
-  .card_plat:hover .check > i {
-            animation: rotation 0.5s linear forwards;
-  }
-
   .check {
     display: flex;
     width: 20px;
@@ -577,39 +606,69 @@ main{
     color: white ;
     font-size: 25px;
   }
-  
-  .carte:hover .check {
-    -webkit-animation: slide 0.5s linear forwards;
-            animation: slide 0.5s linear forwards;
-  }
-  .carte:hover .check > i {
-    -webkit-animation: rotation 0.5s linear forwards;
-            animation: rotation 0.5s linear forwards;
-  }
-  
 
-  @keyframes slide {
-    0% {
-      margin-right: 0px;
-      opacity: 0;
-    }
-    100% {
-      width: 180px;
-      opacity: 1;
-    }
-  }
- 
-  @keyframes rotation {
-    0% {
-      transform: rotate(-180deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
+  .card_plat:hover .check {
+    animation: slide 0.5s linear forwards;
+}
+
+@keyframes slide {
+0% {
+  margin-right: 0px;
+  opacity: 0;
+}
+100% {
+  width: 180px;
+  opacity: 1;
+}
+}
+
+.card_plat:hover .check > i {
+    animation: rotation 0.5s linear forwards;
+}
+
+@keyframes rotation {
+0% {
+  transform: rotate(-180deg);
+}
+100% {
+  transform: rotate(0);
+}
+}
+
+.n2 {
+    animation-delay: .3s;
+}
+
+.n3 {
+    animation-delay: .6s;
+}
+
+.n4 {
+    animation-delay: .9s;
+}
+
+.n5 {
+    animation-delay: 1.2s;
+}
+
+.n6 {
+    animation-delay: 1.5s;
+}
+
+.n7 {
+    animation-delay: 1.8s;
+}
+
+.n8 {
+    animation-delay: 2.1s;
+}
+
+.n9 {
+    animation-delay: 2.4s;
+}
+
 
 .button_commander--taille{
             width: 186px;
             height: 50px;
     }
-        
