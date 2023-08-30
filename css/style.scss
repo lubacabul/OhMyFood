@@ -437,8 +437,6 @@ main{
         padding-top: 30px;
     }
 
- 
-
     }
 
     .heart{
@@ -497,20 +495,22 @@ main{
   display: none;
   }
 
-.menu {
+.page_restaurant {
     width: 375px;
     height: auto;
     background-color: var(--light_grey);
     padding-bottom: 50px;
   }
   
-  .menu_step {
+  .menu {
     display: flex;
     flex-direction: column;
     width: 349px;
     margin: auto;
     row-gap: 12px;
     margin-top: 30px;
+    animation: apparition_plat 500ms linear forwards;
+    
   }
 
 
@@ -531,18 +531,20 @@ main{
   
     .step_titre {
         margin-bottom: 5px;
+        width: fit-content;
         transform: scale(1);
         animation-name: slide;
         animation-duration: 300ms;
     }
     
-    .step_trait_horizontal{
-        padding: 0px;
-        margin-bottom: 12px;
-        border: none;
-        width: 40px;
-        height: 2px;
-        background-color:var(--green)
+    .step_titre::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 70%;
+        height: 3px;
+        background-color: var(--green);
     }
   
   .card_plat{
@@ -555,18 +557,18 @@ main{
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     white-space: nowrap;
-      animation: apparition_plat 500ms linear forwards;
+    
   } 
 
   
   
   @keyframes apparition_plat {
     0% {
-            transform: scale(0);
+            transform: translateX(-100px);
             opacity: 0;
   }
     100% {
-            transform: scale(1);
+            transform: translatex(0px);
             opacity: 1;    
     }
 }
