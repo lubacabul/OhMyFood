@@ -478,6 +478,7 @@ main{
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
+  z-index: 1;
 
 }
   
@@ -554,9 +555,7 @@ main{
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    animation: apparition_plat 500ms linear forwards;
+      animation: apparition_plat 500ms linear forwards;
   } 
 
   
@@ -575,16 +574,27 @@ main{
     .card_plat_text{
         display: flex;
         flex-direction: column;
+        text-overflow: ellipsis;
+        overflow: hidden;
         row-gap: 5px;
-        padding: 15px 0px 15px 15px;
+        padding: 15px 0px 10px 15px;
+        width: 270px;
     }
-  
+
+    .card_plat_text h5{
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    .card_plat_prix {
+        width: 45px;
+        height: 69px;
+
+    }
     .card_plat_prix--position {
         position: relative;
-        width: 80px;
-        height: 35px;
         padding-top: 27px;
-        margin-left: 30px;
+        margin-left: 20px;
         text-align: right;
         padding-right: 15px;
     }
@@ -592,7 +602,7 @@ main{
   
   .check {
     display: flex;
-    width: 20px;
+    max-width: 59px;
     align-items: center;
     justify-content: center;
     background-color: #99E2D0;
@@ -672,3 +682,13 @@ main{
             width: 186px;
             height: 50px;
     }
+
+
+
+/*** DEVICES - MORE THAN  375PX ***/
+
+@media (min-width: 376px) {
+
+
+
+}
