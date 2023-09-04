@@ -220,7 +220,6 @@ main{
         height: 400px;
         padding-top: 48px;
         background-color: white;
-        gap: 20px;
         padding-left: 20px;
 
         &_text{
@@ -228,25 +227,20 @@ main{
             height: 31px;
         }
 
+        .fonctionmt_list {
+            gap: 20px;
+            display: flex;
+        flex-direction: column;
+        }
+
         .bouton_pastille{
-            position: absolute;
-            left: 15px;
+            position: relative;
+            left: -10px;
             width: 24px;
             height: 24px;
             background-color: var(--purple);
             border-radius: 100%;
-        }
-
-        .bouton_pastille--position1{
-            top: 510px;
-        }
-
-        .bouton_pastille--position2{
-            top : 602px;
-        }
-
-        .bouton_pastille--position3{
-            top : 695px;
+            top: 25px;
         }
 
         .bouton_pastille--number{
@@ -400,11 +394,12 @@ main{
         padding-left: 0px;
         padding-bottom: 6px;
     }
+ 
+}
 
-    .footer a {
-        text-decoration: none;
-        color: white;
-    }
+.footer a {
+    text-decoration: none;
+    color: white;
 }
 
 /*************PAGES DES RESTAURANTS*************/
@@ -454,29 +449,25 @@ main{
         width: 375px;
         height: 275px;
     }
-.heart_checkbox{
-    width: 50px;
-}
-
-.heart_checkbox i{
-    left: 312px;
-    top: 50px;
-    position: absolute;
-    
-}
 
 .heart input, 
 .heart i {
-  position: absolute;
   width: 50px;
   height: 50px;
 }
 
+.unchecked{
+    position: relative;
+    top: 15px;
+}
 .checked {
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-  z-index: 1;
+position: absolute;
+background-image: linear-gradient(#FF79DA, #9356DC);
+background-clip: text;
+color: transparent;
+z-index: 1;
+line-height: 1;
+top: 35px;
 
 }
   
@@ -502,29 +493,44 @@ main{
     padding-bottom: 50px;
   }
   
-  .menu {
+
+  .entrees, .plats, .desserts {
     display: flex;
     flex-direction: column;
     width: 349px;
     margin: auto;
     row-gap: 12px;
     margin-top: 30px;
-    animation: apparition_plat 500ms linear forwards;
-    
+    animation: apparition_plat 1500ms linear;
   }
 
-
-.translate {
-    animation: presentation 0.8s linear forwards;
+  @keyframes apparition_plat {
+    0% {
+            transform: translateY(-10px);
+            opacity: 0;
+  }
+    100% {
+            transform: translateY(0px);
+            opacity: 1;    
+    }
 }
+
+.plats{
+    animation-delay: 0.3s;
+}
+
+.desserts{
+    animation-delay: 0.6s;
+}
+
 
       @keyframes presentation {
     from {
-      transform: translateX(-10px);
+      transform: translateY(-10px);
       opacity: 0;
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
       opacity: 1;
     }
   }
@@ -557,21 +563,9 @@ main{
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     white-space: nowrap;
-    
   } 
+  
 
-  
-  
-  @keyframes apparition_plat {
-    0% {
-            transform: translateX(-100px);
-            opacity: 0;
-  }
-    100% {
-            transform: translatex(0px);
-            opacity: 1;    
-    }
-}
   
     .card_plat_text{
         display: flex;
@@ -611,6 +605,7 @@ main{
     opacity: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-left: 5px;
   }
   
   .check i {
@@ -647,39 +642,6 @@ main{
 }
 }
 
-.n2 {
-    animation-delay: .3s;
-}
-
-.n3 {
-    animation-delay: .6s;
-}
-
-.n4 {
-    animation-delay: .9s;
-}
-
-.n5 {
-    animation-delay: 1.2s;
-}
-
-.n6 {
-    animation-delay: 1.5s;
-}
-
-.n7 {
-    animation-delay: 1.8s;
-}
-
-.n8 {
-    animation-delay: 2.1s;
-}
-
-.n9 {
-    animation-delay: 2.4s;
-}
-
-
 .button_commander--taille{
             width: 186px;
             height: 50px;
@@ -687,10 +649,3 @@ main{
 
 
 
-/*** DEVICES - MORE THAN  375PX ***/
-
-@media (min-width: 376px) {
-
-
-
-}
