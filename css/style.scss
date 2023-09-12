@@ -64,7 +64,7 @@ p {
 }
 
 body{
-    max-width: 375px;
+    max-width: 760px;
     background-color: white;
     margin: auto;
 }
@@ -227,12 +227,6 @@ main{
             height: 31px;
         }
 
-        .fonctionmt_list {
-            gap: 20px;
-            display: flex;
-        flex-direction: column;
-        }
-
         .bouton_pastille{
             position: relative;
             left: -10px;
@@ -277,6 +271,12 @@ main{
         }
     }
 
+    .fonctionmt_list {
+        gap: 20px;
+        display: flex;
+    flex-direction: column;
+    }
+
 /*************RESTAURANTS*************/
 
 .restaurants{
@@ -286,6 +286,7 @@ main{
     padding-left: 20px;
     padding-top: 50px;
     gap: 18px;
+    background-color: var(--light_grey);
 
         .restaurants_card{
             width: 340px;
@@ -332,13 +333,14 @@ main{
 }
 
 .card_pastille {
-    position: absolute;
-    left: 268px;
-    width: 80px;
-    height: 29px;
-    background-color: var(--green);
-    margin-top: 10px;
-    border-radius: 2px;
+    position: relative;
+  left: 250px;
+  width: 80px;
+  height: 29px;
+  background-color: var(--green);
+  margin-top: -33px;
+  border-radius: 2px;
+  top: 39px;
 
         &--text {
             color: rgba(0, 135, 102, 1);
@@ -347,6 +349,12 @@ main{
             margin-top: 5px;
             text-align: center;
         }
+}
+
+.restaurant_list{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 /*************FOOTER*************/
@@ -358,7 +366,7 @@ main{
     width: 325px;
     padding: 22px 25px 22px 25px;
     gap: 16px;
-    background-color: black;
+    background-color: rgba(53, 53, 53, 1);
 
     .footer_logo {
         justify-content: left;
@@ -494,17 +502,17 @@ top: 35px;
   }
   
 
-  .entrees, .plats, .desserts {
+  .entrees {
     display: flex;
     flex-direction: column;
     width: 349px;
     margin: auto;
     row-gap: 12px;
     margin-top: 30px;
-    animation: apparition_plat 1500ms linear;
+    animation: entrees 1500ms linear;
   }
 
-  @keyframes apparition_plat {
+  @keyframes entrees {
     0% {
             transform: translateY(-10px);
             opacity: 0;
@@ -515,14 +523,50 @@ top: 35px;
     }
 }
 
-.plats{
-    animation-delay: 0.3s;
-}
-
-.desserts{
+.plats {
+    display: flex;
+    flex-direction: column;
+    width: 349px;
+    margin: auto;
+    row-gap: 12px;
+    margin-top: 30px;
+    animation: plats 1500ms linear;
     animation-delay: 0.6s;
+  }
+
+  @keyframes plats {
+    0% {
+            transform: translateY(-10px);
+            opacity: 0;
+  }
+    100% {
+            transform: translateY(0px);
+            opacity: 1;    
+    }
 }
 
+
+.desserts {
+    display: flex;
+    flex-direction: column;
+    width: 349px;
+    margin: auto;
+    row-gap: 12px;
+    margin-top: 30px;
+    animation: desserts 1500ms;
+    animation-delay: 0.9s;
+  }
+
+  @keyframes desserts {
+    from {
+            transform: translateY(-10px);
+            opacity: 0;
+  }
+    to {
+            transform: translateY(0px);
+            opacity: 1;    
+    }
+}
 
       @keyframes presentation {
     from {
@@ -564,8 +608,6 @@ top: 35px;
     justify-content: space-between;
     white-space: nowrap;
   } 
-  
-
   
     .card_plat_text{
         display: flex;
@@ -647,9 +689,10 @@ top: 35px;
             height: 50px;
     }
 
-/*** DEVICES - MORE THAN  375PX ***/
+    /****** Media queries ***********/
+/* Large devices (equal/more than 1440px) */
 
-@media (min-width: 376px) {
+@media (min-width: 760px) {
 
     body {
         max-width: 1440px;
@@ -669,7 +712,6 @@ top: 35px;
     }
 
     .header_searchbar{
-        width: 100%;
         padding-left: 40px;
     }
 
@@ -678,7 +720,7 @@ top: 35px;
         margin: 0px;
     }
 
-    .explorer, .fonctionmt_list, .restaurant_list{
+    .explorer, .restaurant_list{
         width: 100%;
         margin: auto;
         align-items: center;
@@ -689,9 +731,24 @@ top: 35px;
         width: 100%;
     }
 
+    .fonctionmt{
+        height: 230px;
+        width: 1010px;;
+        margin: auto;
+        padding-left: 0px;
+    }
+
     .fonctionmt_list {
         display: flex;
         flex-direction: row;
+        margin: auto;
+}
+
+.restaurants{
+    width: 1010px;
+    height: 670px;
+    margin: auto;
+    padding: 0px;
 }
 
     .restaurant_list{
@@ -699,19 +756,34 @@ top: 35px;
         grid-template-columns: 500px 500px;
         grid-template-rows: 300px 300px;
         justify-items: center;
-        justify-content: center;
+        margin: 0px;
+        
     }
 
     
     .footer{
         display: flex;
         flex-direction: row-reverse;
-        width: 100%;
+        width: 1440px;
+        height: 114px;
+       
     }
 
-    .footer li{
+    .footer ul{
         width: 100%;
-        display: inline
+        margin-top: auto;
+        margin-left: 426px;
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer_logo{
+        margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 20px;
     }
 }
+
+/* Medium devices (between 760 and 1440px) */
 
