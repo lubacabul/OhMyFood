@@ -1,4 +1,5 @@
 *{ 
+    box-sizing: border-box;
     font-family: 'Archivo', sans-serif;
     font-family: 'Manrope', sans-serif;
 }
@@ -9,7 +10,6 @@
     --green: #99E2D0;
     --light_grey : rgba(246, 246, 246, 1);
     --gradient: linear-gradient(0deg, rgba(147,86,220,1) 29%, rgba(255,121,218,1) 100%);
-    --size: 5px;
 }
 
 h1 {
@@ -65,7 +65,6 @@ p {
 }
 
 body{
-    max-width: 375px;
     background-color: white;
     margin: auto;
 }
@@ -77,17 +76,26 @@ body{
     background-color: white;
 }
 
+main {
+    width: 100%;
+}
+
 
 /*************HEADER*************/
+header{
+    box-shadow: 0 0 0.5rem rgba(0 0 0/ 30%);
+    width: 100%;
+    z-index: 1;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 
 .header_logo {
-    width: 375px;
     height: 40px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .header_arrow{
@@ -97,7 +105,9 @@ body{
     left: 15px;
 }
 
-.header_searchbar {
+/*************Location *************/
+
+.location {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -105,7 +115,6 @@ body{
     height: 50px;
     gap: 17px;
     background-color: rgba(234, 234, 234, 1);
-    width: 375px;
 
         &--background {
             border: none;
@@ -119,52 +128,44 @@ body{
             line-height: 19px;  
             color: black; 
         }
-
 }
 
-.fa-location-dot {
-    margin-left: 80px;
-}
+/*************Partie "Explorer nos restauran" *************/
 
-/*************EXPLORER*************/
 .explorer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 375px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 2em;
     background-color: var(--light_grey);
 
-        &_h2 {
-            width: 275px;
-            height: 68px;
+        &_title {
+            padding: 1em;
             text-align: center;
             margin: auto;
+            white-space: normal ;
         }
 
-        &_p{
-            width: 315px;
-            height: 46px;
+        &_subtitle{
             margin: auto;
             text-align: center;
         }
     }
 
-    .button {
-        margin: auto;
-        margin-top: 30px;
-        display: flex;
-        align-items: center; 
-        justify-content: center ;
+.button {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center; 
+    justify-content: center ;
 
-        .button_explorer--taille {
+        &_explorer--size {
             width: 218px;
             height: 50px;
         }
 
 
-        .button_text{
+        &_text{
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
@@ -176,14 +177,13 @@ body{
             align-items: center;
         }
 
-        
-        .button_style {
+        &_style {
             border-radius: 25px;
             border: none;
             background: linear-gradient(0deg, rgba(147,86,220,1) 29%, rgba(255,121,218,1) 100%); 
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .25);
             position: relative;
-            z-index: 1;
+            z-index: 0;
             cursor: pointer;
 
                 &:hover {
@@ -213,45 +213,41 @@ body{
 }
 
 
-    /*************FONCTIONNEMENT*************/
+    /*************Guideline*************/
 
-    .fonctionmt {
+    .guideline {
         display: flex;
         flex-direction: column;
-        height: 400px;
-        padding-top: 40px;
+        padding:1.5rem;
         background-color: white;
-        width: 375px;
 
         &_text{
-            width: 350px;
             height: 31px;
-            padding-left: 20px;
         }
 
-        .bouton_pastille{
+        .button_dot{
             position: relative;
             left: -10px;
+            top: 25px;
             width: 24px;
             height: 24px;
             background-color: var(--purple);
             border-radius: 100%;
-            top: 25px;
-        }
+            
 
-        .bouton_pastille--number{
+        &--number{
             color: white;
             width: 15px;
             margin:auto;
             margin-top: 2px;
             text-align: center;
+            }
         }
 
-        .fonctionmt_bouton {
+        .step_button {
             display: flex;
             flex-direction: row;
-            width: 322px;
-            height: 72px;
+            height: 70px;
             border-radius:20px;
             background-color: var(--light_grey);
         }
@@ -259,13 +255,12 @@ body{
         .fa-solid{
             display: flex;
             align-items: center;
-            margin-left: 30px;
+            margin: 1em;
         }
 
-        .bouton_text--style{
-            width: 211px;
-            height: 15px;
-            margin: auto;
+        .button_text--style{
+            margin-top: auto;
+            margin-bottom: auto;
         }
 
         .fa-store {
@@ -273,28 +268,26 @@ body{
         }
     }
 
-    .fonctionmt_list {
+    .step_list {
         gap: 20px;
         display: flex;
-    flex-direction: column;
-    margin: auto;
+        flex-direction: column;
+        padding: 0.5rem;
     }
 
-/*************RESTAURANTS*************/
+/*************Liste des restaurants *************/
 
 .restaurants{
     display: flex;
     flex-direction: column;
-    height: 1176px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
+    padding: 1.5rem;
     gap: 18px;
     background-color: var(--light_grey);
-    width: 375px;
 
+.restaurants_title{
+    padding-top: 1rem;
+    }
         .restaurants_card{
-            width: 340px;
             height: 251px;
             border-radius: 15px;
             background-color: rgba(255, 255, 255, 1);
@@ -302,7 +295,7 @@ body{
         }
 
         .restaurants_card img{
-            width: 340px;
+            width: 100%;
             height: 180px;
             border-radius: 15px 15px 0px 0px;
             object-fit: cover;
@@ -318,10 +311,8 @@ body{
             flex-direction: row;
             justify-content: space-between;
             height: 60px;
-            width: 300px;
-            padding-left: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 0.7em;
+            padding-right: 1.5em;
         }
 
         .card_heart {
@@ -366,37 +357,23 @@ body{
     }
 }
 
-.restaurants_title{
-    width: 350px;
-    height: 31px;
-    padding-top: 40px;
-    padding-left: 20px;
-}
+
 
 .card_pastille {
-    position: relative;
-  left: 250px;
-  width: 80px;
-  height: 29px;
+position: absolute;
   background-color: var(--green);
-  margin-top: -33px;
   border-radius: 2px;
-  top: 39px;
-
-        &--text {
-            color: rgba(0, 135, 102, 1);
-            width: 61px;
-            margin:auto;
-            margin-top: 5px;
-            text-align: center;
+  padding: 0.5em;
+  color: rgba(0, 135, 102, 1);
+  text-align: center;
+  margin-top: 1em;
         }
-}
+
 
 .restaurant_list{
     gap: 30px;
     display: flex;
     flex-direction: column;
-    margin: auto;
 }
 
 /*************FOOTER*************/
@@ -404,29 +381,23 @@ body{
 .footer{
     display: flex;
     flex-direction: column;
-    height: 186px ;
-    width: 375px;
-    padding-top: 22px 0px 22px 0px;
+    width: 100%;
+    padding: 2em;
     gap: 16px;
     background-color: rgba(53, 53, 53, 1);
 
     .footer_logo {
-        width: 230px;
-        height: 27px;
-        padding-top: 22px;
+        width: 139px;
         }
 
     .footer_fa {
         width: 24px;
-        height: 13px;
+        padding-right: 25px;
     }
 
     .footer_link {
         display: flex;
         flex-direction: row;
-        width: 375px;
-        height: 19px;
-        padding-bottom: 6px;
 
             &--color {
                 color: white;
@@ -435,7 +406,8 @@ body{
 }
 
 .footer ul{
-    margin-top: 10px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .footer li{
@@ -740,7 +712,7 @@ top: 35px;
 
 
 /* Large devices (equal/more than 1440px) */
-
+/*
 @media (min-width: 1440px) {
 
     body {
@@ -977,10 +949,9 @@ top: 35px;
     align-items: center;
     align-content: center; 
     justify-content: center;  
-    z-index: 100000;
-    animation : opacity;
+    animation : calc;
     animation-duration: 5s;
-    opacity: 0;
+    opacity: 0.9;
   }
   
   .loader__element--pink {
@@ -1031,7 +1002,6 @@ top: 35px;
   }
 
   @keyframes opacity {
-    0% {opacity: 0.9;}
-    99% {opacity: 0.9;}
-    100% { opacity: 0;}
+    0% {z-index: 100000;}
+    100% {z-index: -1000; }
   }
