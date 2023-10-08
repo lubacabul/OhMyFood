@@ -284,6 +284,7 @@ header{
 
 .restaurants_title{
     padding-top: 1rem;
+    padding-bottom: 1rem;
     }
         .restaurants_card{
             height: 251px;
@@ -665,177 +666,126 @@ display: none;
     }
 
     /****** Media queries ***********/
+/* Medium and (between 700px and 1070px ) */
 
-/* Medium devices (between 760 and 1440px) */
+@media (min-width: 700px) {
 
-@media (min-width: 760px)  {
-
-}
-
-
-
-
-/* Large devices (equal/more than 1440px) */
-/*
-@media (min-width: 1440px) {
-
-    body {
-        max-width: 1440px;
-        height: 1395px;
-    }
-
-    .main-container{
-        width: 100%;
-    }
-
-    header {
-        width: 100%;
-    }
-
-    .header_logo{
-        margin: auto;
-    }
-
-    .header_searchbar{
-        min-width: 1440px;
-    }
-
-    main{
-        width: 100%;
-        margin: 0px;
-    }
-
-    .explorer, .restaurant_list{
-        width: 100%;
-        margin: auto;
-        align-items: center;
-
-    }
-
-    .explorer h2{
-        width: 100%;
-        font-size: 40px;
-    }
-
-    .fonctionmt{
-        height: 230px;
-        width: 1440px;;
-        margin: auto;
-        padding-left: 0px;
-    }
-
-    .fonctionmt_list {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-}
-
-.fonctionmt_text {
-    padding-left: 115px;
-}
-
-.restaurants{
-    width: 1440px;
-    height: 720px;
-    padding-left: 0px;
-    margin:auto;
-}
-
-.restaurants_title{
-    padding-left: 115px;
-}
-
+        /*home page*/
     .restaurant_list{
         display: grid;
-        grid-template-columns: 500px 500px;
-        grid-template-rows: 300px 300px;
-        margin: 0px;
-        padding-left: 115px;
-        
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 50% 50%;
     }
 
-    .restaurants_card {
-        width : 490px;
-        height : 251px;
-    }
-
-    .restaurants_card img{
-        width : 490px;
-        height: 180px;
+.restaurants_card img{
         border-radius: 15px 15px 0px 0px;
         object-fit: cover;
+        width: 100%;
+        height: 180px;
     }
 
-    .restaurants_card a {
+.restaurants_card a {
         text-decoration: none;
         color: black;
     }
 
-    .card_content {
+.card_content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 60px;
-        width: 450px;
-        padding-left: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
     
-    .card_heart--size .card_heart--color{
+.card_heart--size .card_heart--color{
         left: 140px;
     }
 
-    .footer{
-        display: flex;
-        flex-direction: row-reverse;
-        width: 1440px;
-        height: 114px;
-        padding: 0px;
-       
+}
+
+/* Large devices (equal/more than 1070px) */
+
+@media (min-width: 1070px) {
+
+    /*Home page*/
+.main-container{
+        width: 100%;
     }
 
-    .footer ul{
+.explorer h2{
+        font-size: 40px;
+    }
+
+.guideline_container{
+    max-width: 1070px;
+    min-width: 1030px;
+    margin: auto;
+}
+
+.step_list {
+        display: flex;
+        flex-direction: row;
+}
+
+.step_button{
+    width: 33%;
+}
+
+.restaurants_container{
+    max-width: 1070px;
+    margin: auto;
+}
+
+.restaurant_list{
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 260px 260px;
+    margin: auto;
+}
+
+.restaurants_card{
+    max-width: 490px;
+}
+
+.footer{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 114px;
+    }
+
+.footer ul{
         width: 100%;
-        margin-top: auto;
-        margin-bottom: auto;
         display: flex;
         flex-direction: row;
         justify-content: right;
-        padding: 0px;
     }
 
-    .footer_logo{
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-right: 158px;
+.footer_logo{
     width: 140px;
+    margin: 0px;
     }
 
-    .footer_link{
+.footer_link{
         margin: 15px;
-        width: 170px;
     }
 
-    .header_arrow{
+.header_arrow{
         left: 30px;
     }
-    .page_restaurant {
+.page_restaurant {
         width: 1440px;
         background-color: white;
         padding-bottom: 0px;
     }
 
-    .bloc_id {
+.bloc_id {
         width: 1440px;
         height: 315px;
     }
 
-    .bloc_id_image {
+.bloc_id_image {
         width: 1440px;
     }
 
-    .bloc_id_txt {
+.bloc_id_txt {
         width: 1055px;
         margin: auto;
         margin-top: 0px;
