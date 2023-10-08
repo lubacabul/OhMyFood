@@ -99,7 +99,6 @@ header{
 }
 
 .header_arrow{
-    padding-top: 20px;
     position: relative;
     top: 30px;
     left: 15px;
@@ -138,9 +137,9 @@ header{
     justify-content: center;
     padding: 2em;
     background-color: var(--light_grey);
+    row-gap: 15px;
 
         &_title {
-            padding: 1em;
             text-align: center;
             margin: auto;
             white-space: normal ;
@@ -154,7 +153,6 @@ header{
 
 .button {
     margin: auto;
-    margin-top: 30px;
     display: flex;
     align-items: center; 
     justify-content: center ;
@@ -357,8 +355,6 @@ header{
     }
 }
 
-
-
 .card_pastille {
 position: absolute;
   background-color: var(--green);
@@ -426,104 +422,82 @@ position: absolute;
 .page_restaurant{
     display: flex;
     flex-direction: column;
+    background-color: var(--light_grey);
 }
 
 .bloc_id{
     display: flex;
     flex-direction: column;
-    width: 375px;
-    height: 275px;
     
     
-    &_txt{
+    &_background{
         display: flex;
         flex-direction: row;
         background-color: var(--light_grey);
-        top: 215px;
-        position: relative;
         border-radius: 40px 40px 0px 0px;
         z-index: 1;
         justify-content: space-between;
+        margin-top: -50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
     &_titre{
         padding-left: 20px;
-        padding-top: 30px;
     }
 
-    }
-
-    .heart{
-        margin-top: 25px;
-        margin-right: 20px; 
-        width: 50px;
-    }
-
-    .bloc_id_image{
-        position: absolute;
-        top: 75px;
-    }
-
-    .bloc_id_image img{
-        width: 375px;
-        height: 275px;
-    }
-
-.heart input, 
-.heart i {
-  width: 50px;
-  height: 50px;
 }
 
+/*bouton "like" cliquable*/
+.heart{
+    padding-right: 25px;
+    }
+  
 .unchecked{
     position: relative;
     top: 15px;
 }
 .checked {
-position: absolute;
+position: relative;
 background-image: linear-gradient(#FF79DA, #9356DC);
 background-clip: text;
 color: transparent;
 z-index: 1;
 line-height: 1;
-top: 35px;
+top: 14px;
+}
 
+.heart_checkbox input[type="checkbox"],
+
+.heart_checkbox .checked {
+  display: none;
+  }
+  
+.heart_checkbox input[type="checkbox"]:checked ~ .checked
+  
+{
+ display: inline-block;
 }
   
-  .heart_checkbox input[type="checkbox"],
-  .heart_checkbox .checked {
-  display: none;
-  }
+.heart_checkbox input[type="checkbox"]:checked ~ .unchecked
   
-  .heart_checkbox input[type="checkbox"]:checked ~ .checked
-  {
-  display: inline-block;
-  }
-  
-  .heart_checkbox input[type="checkbox"]:checked ~ .unchecked
-  {
-  display: none;
-  }
+{
+display: none;
+}
 
-.page_restaurant {
-    width: 375px;
-    height: auto;
-    background-color: var(--light_grey);
-    padding-bottom: 50px;
-  }
-  
-
-  .entrees {
+.menu_list {
+    padding-bottom: 20px;
+}
+.entrees {
     display: flex;
     flex-direction: column;
-    width: 349px;
     margin: auto;
     row-gap: 12px;
-    margin-top: 30px;
+    padding: 1em;
     animation: entrees 1500ms linear;
-  }
+}
 
-  @keyframes entrees {
+@keyframes entrees {
     0% {
             transform: translateY(-10px);
             opacity: 0;
@@ -537,10 +511,9 @@ top: 35px;
 .plats {
     display: flex;
     flex-direction: column;
-    width: 349px;
     margin: auto;
     row-gap: 12px;
-    margin-top: 30px;
+    padding: 1em;
     animation: plats 1500ms linear;
     animation-delay: 0.6s;
   }
@@ -560,10 +533,10 @@ top: 35px;
 .desserts {
     display: flex;
     flex-direction: column;
-    width: 349px;
     margin: auto;
     row-gap: 12px;
-    margin-top: 30px;
+    padding: 1em;
+    padding-bottom: 2em;
     animation: desserts 1500ms;
     animation-delay: 0.9s;
   }
@@ -611,7 +584,6 @@ top: 35px;
   .card_plat{
     display: flex;
     flex-direction: row;
-    width: 349px;
     height: 69px;
     border-radius: 15px;
     background-color: white;
@@ -627,31 +599,21 @@ top: 35px;
         overflow: hidden;
         row-gap: 5px;
         padding: 15px 0px 10px 15px;
-        width: 270px;
+        width: 90%;
     }
 
-    .card_plat_text h5{
+    .card_plat_text h5,
+    .card_plat_text h4{
         text-overflow: ellipsis;
         overflow: hidden;
     }
     
-    .card_plat_prix {
-        width: 45px;
-        height: 69px;
-
-    }
     .card_plat_prix--position {
-        position: relative;
         padding-top: 27px;
-        margin-left: 20px;
-        text-align: right;
-        padding-right: 15px;
     }
-   
   
   .check {
     display: flex;
-    max-width: 59px;
     align-items: center;
     justify-content: center;
     background-color: #99E2D0;
@@ -698,6 +660,8 @@ top: 35px;
 .button_commander--taille{
             width: 186px;
             height: 50px;
+            margin: 0px;
+            padding: 20px;
     }
 
     /****** Media queries ***********/
