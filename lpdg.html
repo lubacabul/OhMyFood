@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Oh My Food</title>
+    <title>Oh My Food - La palette du goût</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -25,10 +25,11 @@
             </div>
         </header>
 
-        <main class="page_restaurant">
+    <main class="page_restaurant">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat La palette du goût">
+        <div class="bloc_menu">
             <div class="bloc_id">
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-                    <div class="bloc_id_background">
+                <div class="bloc_id_background">
                     <h1 class="bloc_id_titre">La palette du goût</h1>
                     <div class="heart">
                         <label class="heart_checkbox">
@@ -36,6 +37,7 @@
                             <i class="unchecked fa-sharp fa-regular fa-heart fa-xl" aria-hidden="true"></i>
                             <i class="checked fa-sharp fa-solid fa-heart fa-xl" aria-hidden="true"></i>
                         </label>
+                    </div>
                 </div>
             </div>
             <div class="menu_list">
@@ -150,12 +152,17 @@
                     </div>
                 </article>
             </section>
+            </div>
 
             <div class="button">
-                <button class="button_text button_style button_commander--taille" href="#">Commander</button>
+                <a
+                  href="#ancre-commande"
+                  class="button_text button_style button_commander--taille"
+                  >Commander</a
+                >
             </div>
-            </div>
-        </main>
+        </div>
+    </main>
 
         <footer class="footer">
             <img class="footer_logo" src="./images/logo/ohmyfood@2x_white.svg" alt="logo Ohmyfood">
@@ -182,6 +189,5 @@
 
             </ul>
         </footer>
-        -->
     </div>
 </body>

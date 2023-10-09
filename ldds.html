@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Oh My Food</title>
+    <title>Oh My Food - Le délice des sens</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -26,24 +26,24 @@
         </header>
 
         <main class="page_restaurant">
-            <div class="bloc_id">
-                <div class="bloc_id_image">
-                    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
-                </div>
-                    <h1 class="bloc_id_titre">Le délice des sens</h1>
-                    <div class="heart">
+            <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat Le délice des sens">
+            <div class="bloc_menu">
+                <div class="bloc_id">
+                    <div class="bloc_id_background">
+                        <h1 class="bloc_id_titre">Le délice des sens</h1>
+                        <div class="heart">
                         <label class="heart_checkbox">
                             <input type="checkbox">
-                            <i class="unchecked fa-sharp fa-regular fa-heart fa-2xl" aria-hidden="true"></i>
-                            <i class="checked fa-sharp fa-solid fa-heart fa-2xl" aria-hidden="true"></i>
+                            <i class="unchecked fa-sharp fa-regular fa-heart fa-xl" aria-hidden="true"></i>
+                            <i class="checked fa-sharp fa-solid fa-heart fa-xl" aria-hidden="true"></i>
                         </label>
+                        </div>
                 </div>
-
             </div>
             <div class="menu_list">
             <section class="entrees">
                 <h5 class="step_titre ">ENTREES</h5>
-                <article class="card_plat n1">
+                <article class="card_plat">
                     <div class="card_plat_text">
                         <h4>Tartare de thon</h4>
                         <h5>Assaisonné au yuzu</h5>
@@ -54,7 +54,7 @@
                     </div>
                 </article>
 
-                <article class="card_plat n2">
+                <article class="card_plat">
                     <div class="card_plat_text">
                         <h4>Bouchée de homard croustillant</h4>
                         <h5>Et sa farandole de petits légumes</h5>
@@ -65,7 +65,7 @@
                     </div>
                 </article>
 
-                <article class="card_plat n3">
+                <article class="card_plat">
                     <div class="card_plat_text">
                         <h4>Velouté de cèpes</h4>
                         <h5>Aux truffes</h5>
@@ -154,8 +154,13 @@
             </section>
 
             <div class="button">
-                <button class="button_text button_style button_commander--taille" href="#">Commander</button>
-            </div>
+                <a
+                  href="#ancre-commande"
+                  class="button_text button_style button_commander--taille"
+                  >Commander</a
+                >
+              </div>
+
             </div>
         </main>
 

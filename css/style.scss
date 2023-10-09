@@ -119,14 +119,6 @@ header{
             border: none;
             background-color: rgba(234, 234, 234, 1);
         }
-
-        &--text{
-            font-family: Roboto;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 19px;  
-            color: black; 
-        }
 }
 
 /*************Partie "Explorer nos restauran" *************/
@@ -323,7 +315,6 @@ header{
                     margin-left: 10px;
                     position: relative;
                     z-index: 0;
-                    background-image: white;
                     background-clip: text;
                 }
 
@@ -424,6 +415,10 @@ position: absolute;
     display: flex;
     flex-direction: column;
     background-color: var(--light_grey);
+}
+
+.bloc_menu{
+    margin: 1px;
 }
 
 .bloc_id{
@@ -622,6 +617,7 @@ display: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-left: 5px;
+    max-width: 15em;
   }
   
   .check i {
@@ -677,6 +673,11 @@ display: none;
         grid-template-rows: 50% 50%;
     }
 
+    .page_restaurant img{
+        height: 500px;
+        object-fit: cover;
+    }
+
 .restaurants_card img{
         border-radius: 15px 15px 0px 0px;
         object-fit: cover;
@@ -700,6 +701,22 @@ display: none;
         left: 140px;
     }
 
+    /*page restaurants*/
+
+.page_restaurant{
+        background-color: white;
+    }
+
+.bloc_menu {
+    max-width: 700px;
+    min-width: 670px;
+    background-color: var(--light_grey);
+    margin: auto;
+}
+
+.button {
+    padding-bottom: 50px;
+}
 }
 
 /* Large devices (equal/more than 1070px) */
@@ -707,9 +724,6 @@ display: none;
 @media (min-width: 1070px) {
 
     /*Home page*/
-.main-container{
-        width: 100%;
-    }
 
 .explorer h2{
         font-size: 40px;
@@ -770,83 +784,8 @@ display: none;
 .header_arrow{
         left: 30px;
     }
-.page_restaurant {
-        width: 1440px;
-        background-color: white;
-        padding-bottom: 0px;
-    }
 
-.bloc_id {
-        width: 1440px;
-        height: 315px;
-    }
-
-.bloc_id_image {
-        width: 1440px;
-    }
-
-.bloc_id_txt {
-        width: 1055px;
-        margin: auto;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        height: 100px;
-    }
-
-    .bloc_id_titre {
-        padding: 0px;
-        margin: auto;
-    }
-
-    .bloc_id_image img{
-        width: 1440px;
-        object-fit: cover;
-    }
-
-    .entrees {
-        width: 634px;
-        margin: auto;
-        margin-bottom: 40px;
-    }
-
-    .plats{
-        width: 634px;
-        margin: auto;
-        margin-bottom: 40px;
-    }
-
-
-    .desserts {
-        width: 634px;
-        margin: auto;
-    }
-
-
-    .card_plat{
-        width: 634px;
-    }
-
-    .check {
-        max-width: 150px;
-      }
-
-    .card_plat_text{
-        width: 480px;
-    }
-
-    .card_plat_prix{
-        width: 100px;
-    }
-
-    .color_grey{
-        background: var(--light_grey);
-        width: 1055px;
-        margin: auto;
-    }
-
-    .button {
-        padding-bottom: 50px;
-    }
+    
 }
 
 /************LOADER*************/
