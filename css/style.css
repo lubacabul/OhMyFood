@@ -121,7 +121,7 @@ header {
   background-color: rgb(234, 234, 234);
 }
 
-/*************Partie "Explorer nos restaurants" *************/
+/*************Partie "Explorer nos restauran" *************/
 .explorer {
   display: flex;
   flex-direction: column;
@@ -255,7 +255,7 @@ header {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(1, 1);
+  grid-template-columns: auto;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 2rem;
@@ -263,7 +263,7 @@ header {
 }
 @media (min-width: 64rem) {
   .cards {
-    grid-template-columns: repeat(2, 1);
+    grid-template-columns: auto;
   }
 }
 
@@ -286,17 +286,17 @@ header {
 }
 .card_pastille {
   background-color: var(--green);
-  color: rgba(0, 135, 102, 1);;
+  color: rgb(0, 135, 102);
   padding: 0.5rem;
   border-radius: 0.125rem;
   position: absolute;
   top: 1rem;
   right: 0.75rem;
   font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19px;
-    margin: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  margin: 0px;
 }
 .card_content {
   padding: 1rem;
@@ -738,7 +738,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    padding-right : 8rem;
+    padding-right: 8rem;
   }
   .footer_logo {
     width: 140px;
@@ -751,75 +751,81 @@ header {
     left: 30px;
   }
 }
-
 /************LOADER*************/
-
-.loader_background{
-    display: flex;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    animation: preloader 6s;
+.loader_background {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  animation: preloader 3s;
 }
 
 @keyframes preloader {
-    0% { z-index: 2;}
-    99% {z-index: 2;}
-    100%{z-index: 0;}
-    
+  0% {
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+.loader__element--pink {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--pink);
+  margin: 10px;
+  opacity: 0;
 }
 
-.loader__element--pink {
-    border-radius: 100%;
-    width: 10px;
-    height: 10px;
-    background-color: var(--pink);
-    margin: 10px;
-    opacity: 0;
-  }
-  
-  .loader__element--purple {
-    border-radius: 100%;
-    width: 10px;
-    height: 10px;
-    background-color: var(--purple);
-    margin: 10px;
-    opacity: 0;
-  }
-  
-  .le1 {
-    animation: loader 0.6s ease-in-out alternate;
-    animation-iteration-count: 7;
-  }
-  
-  .le2 {
-    animation: loader 0.6s ease-in-out alternate;
-    animation-delay: 0.2s;
-    animation-iteration-count: 7;
-  }
-  
-  .le3 {
-    animation: loader 0.6s ease-in-out alternate;
-    animation-delay: 0.4s;
-    animation-iteration-count: 7;
-  }
-  
-  .le4 {
-    animation: loader 0.6s ease-in-out alternate;
-    animation-delay: 0.6s;
-    animation-iteration-count: 7;
-  }
-  
-  .le5 {
-    animation: loader 0.6s ease-in-out alternate;
-    animation-delay: 0.8s;
-    animation-iteration-count: 7;
-  }
+.loader__element--purple {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--purple);
+  margin: 10px;
+  opacity: 0;
+}
 
-  @keyframes loader{
-    0% {opacity: 100%;}
-    100%{opacity: 0%;}
+.le1 {
+  animation: loader 0.6s ease-in-out alternate;
+  animation-iteration-count: 4;
+}
+
+.le2 {
+  animation: loader 0.6s ease-in-out alternate;
+  animation-delay: 0.2s;
+  animation-iteration-count: 4;
+}
+
+.le3 {
+  animation: loader 0.6s ease-in-out alternate;
+  animation-delay: 0.4s;
+  animation-iteration-count: 4;
+}
+
+.le4 {
+  animation: loader 0.6s ease-in-out alternate;
+  animation-delay: 0.6s;
+  animation-iteration-count: 4;
+}
+
+.le5 {
+  animation: loader 0.6s ease-in-out alternate;
+  animation-delay: 0.8s;
+  animation-iteration-count: 4;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 100%;
   }
+  100% {
+    opacity: 0%;
+  }
+}/*# sourceMappingURL=style.css.map */
