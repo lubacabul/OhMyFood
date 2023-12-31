@@ -292,6 +292,11 @@ header {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
+  font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin: 0px;
 }
 .card_content {
   padding: 1rem;
