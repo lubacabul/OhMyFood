@@ -75,6 +75,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: white;
+  z-index: 1;
+  position: relative;
 }
 
 main {
@@ -119,7 +121,7 @@ header {
   background-color: rgb(234, 234, 234);
 }
 
-/*************Partie "Explorer nos restauran" *************/
+/*************Partie "Explorer nos restaurants" *************/
 .explorer {
   display: flex;
   flex-direction: column;
@@ -241,58 +243,99 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  padding-top: 1.5rem;
+  width: 100%;
 }
 
 /*************Liste des restaurants *************/
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  gap: 18px;
-  background-color: var(--light_grey);
+  background-color: #f6f6f6;
+  padding: 1rem;
 }
-.restaurants .restaurants_title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+  padding-top: 1.5rem;
 }
-.restaurants .restaurants_card {
-  height: 251px;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+@media (min-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1);
+  }
 }
-.restaurants .restaurants_card img {
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card_img {
+  height: 12rem;
   width: 100%;
-  height: 180px;
-  border-radius: 15px 15px 0px 0px;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants .restaurants_card a {
-  text-decoration: none;
+.card_pastille {
+  background-color: var(--green);
   color: black;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
 }
-.restaurants .card_content {
+.card_content {
+  padding: 1rem;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0.7em;
-  padding-right: 1.5em;
+  align-items: center;
 }
-.restaurants .card_heart {
+.card_text {
+  flex: 1;
+}
+.card_title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.card_subtitle {
+  margin: 0;
+}
+.card__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__like {
+  background-color: white !important;
+}
+
+.card_heart {
   width: 26px;
   height: 22px;
   margin: 1px;
 }
-.restaurants .card_heart--size {
+.card_heart--size {
   margin-left: 10px;
   position: relative;
   z-index: 0;
   -webkit-background-clip: text;
           background-clip: text;
 }
-.restaurants .card_heart--color {
+.card_heart--color {
   position: relative;
   left: 10px;
   top: -22px;
@@ -304,7 +347,8 @@ header {
   line-height: 1;
   transition: all 200ms ease-in-out;
 }
-.restaurants .card_heart--color:hover {
+
+.card_heart--color:hover {
   opacity: 1;
   transform: scale(1.05);
   animation: heart 500ms linear;
@@ -318,22 +362,6 @@ header {
     opacity: 1;
   }
 }
-.card_pastille {
-  position: absolute;
-  background-color: var(--green);
-  border-radius: 2px;
-  padding: 0.5em;
-  color: rgb(0, 135, 102);
-  text-align: center;
-  margin-top: 1em;
-}
-
-.restaurant_list {
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
 /*************FOOTER*************/
 .footer {
   display: flex;
@@ -342,6 +370,8 @@ header {
   padding: 2em;
   gap: 16px;
   background-color: rgb(53, 53, 53);
+  position: relative;
+  z-index: 1;
 }
 .footer .footer_logo {
   width: 139px;
@@ -615,26 +645,30 @@ header {
 
 /****** Media queries ***********/
 /* Medium and (between 700px and 1070px ) */
-@media (min-width: 700px) {
+@media (min-width: 700.01px) {
   /*home page*/
-  .restaurant_list {
+  .step_list {
+    width: 100%;
+  }
+  .cards {
     display: grid;
     grid-template-columns: 48% 48%;
     grid-template-rows: 50% 50%;
+    padding-bottom: 2em;
   }
   .page_restaurant img {
     height: 500px;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .restaurants_card img {
+  .card img {
     border-radius: 15px 15px 0px 0px;
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
     height: 180px;
   }
-  .restaurants_card a {
+  .card {
     text-decoration: none;
     color: black;
   }
@@ -643,9 +677,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     height: 60px;
-  }
-  .card_heart--size .card_heart--color {
-    left: 140px;
   }
   /*page restaurants*/
   .page_restaurant {
@@ -662,7 +693,7 @@ header {
   }
 }
 /* Large devices (equal/more than 1070px) */
-@media (min-width: 1070px) {
+@media (min-width: 1070.01px) {
   /*Home page*/
   .explorer h2 {
     font-size: 40px;
@@ -675,20 +706,21 @@ header {
   .step_list {
     display: flex;
     flex-direction: row;
+    width: 1070px;
   }
   .step_button {
     width: 33%;
   }
-  .restaurants_container {
+  .container {
     max-width: 1070px;
     margin: auto;
   }
-  .restaurant_list {
+  .cards {
     grid-template-columns: 500px 500px;
     grid-template-rows: 260px 260px;
     margin: auto;
   }
-  .restaurants_card {
+  .card {
     max-width: 490px;
   }
   .footer {
@@ -713,78 +745,3 @@ header {
     left: 30px;
   }
 }
-/************LOADER*************/
-.loader {
-  background-color: white;
-  overflow: hidden;
-  width: 100%;
-  height: 1000px;
-  position: fixed;
-  top: -130px;
-  left: 0;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  animation: calc;
-  animation-duration: 5s;
-  opacity: 0.9;
-}
-
-.loader__element--pink {
-  border-radius: 100%;
-  border: 5px solid var(--pink);
-  margin: 10px;
-  opacity: 0;
-}
-
-.loader__element--purple {
-  border-radius: 100%;
-  border: 5px solid var(--purple);
-  margin: 10px;
-  opacity: 0;
-}
-
-.le1 {
-  animation: loader 0.6s ease-in-out alternate;
-  animation-iteration-count: 7;
-}
-
-.le2 {
-  animation: loader 0.6s ease-in-out alternate;
-  animation-delay: 0.2s;
-  animation-iteration-count: 7;
-}
-
-.le3 {
-  animation: loader 0.6s ease-in-out alternate;
-  animation-delay: 0.4s;
-  animation-iteration-count: 7;
-}
-
-.le4 {
-  animation: loader 0.6s ease-in-out alternate;
-  animation-delay: 0.6s;
-  animation-iteration-count: 7;
-}
-
-.le5 {
-  animation: loader 0.6s ease-in-out alternate;
-  animation-delay: 0.8s;
-  animation-iteration-count: 7;
-}
-
-@keyframes loader {
-  100% {
-    transform: scale(3);
-    opacity: 0.9;
-  }
-}
-@keyframes opacity {
-  0% {
-    z-index: 100000;
-  }
-  100% {
-    z-index: -1000;
-  }
-}/*# sourceMappingURL=style.css.map */
