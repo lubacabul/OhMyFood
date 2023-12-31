@@ -713,9 +713,10 @@ header {
     flex-direction: row;
     width: 1070px;
   }
-  .step_button {
-    width: 31%;
-  }
+  
+ .step_button{
+    width: 30%;
+}
   .container {
     max-width: 1070px;
     margin: auto;
