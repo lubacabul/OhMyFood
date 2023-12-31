@@ -738,6 +738,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    padding-right : 8rem;
   }
   .footer_logo {
     width: 140px;
