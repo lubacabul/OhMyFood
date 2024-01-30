@@ -343,7 +343,7 @@ header {
 .card_heart--color {
   position: relative;
   left: 10px;
-  top: -22px;
+  top: -20px;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -457,7 +457,7 @@ header {
   color: transparent;
   z-index: 1;
   line-height: 1;
-  top: 14px;
+  top: 11px;
 }
 
 .heart_checkbox input[type=checkbox],
@@ -693,7 +693,14 @@ header {
     background-color: var(--light_grey);
     margin: auto;
   }
-  .button {
+  .menu_list {
+    padding-bottom: 20px;
+    margin: auto;
+    min-width: 670px;
+    max-width: 700px;
+    background-color: var(--light_grey);
+  }
+  .menu_list .button {
     padding-bottom: 50px;
   }
 }
@@ -713,10 +720,9 @@ header {
     flex-direction: row;
     width: 1070px;
   }
-  
- .step_button{
+  .step_button {
     width: 30%;
-}
+  }
   .container {
     max-width: 1070px;
     margin: auto;
@@ -750,6 +756,13 @@ header {
   }
   .header_arrow {
     left: 30px;
+  }
+  .menu_list {
+    padding-bottom: 20px;
+    margin: auto;
+    min-width: 670px;
+    max-width: 700px;
+    background-color: var(--light_grey);
   }
 }
 /************LOADER*************/
