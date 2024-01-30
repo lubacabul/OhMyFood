@@ -121,7 +121,7 @@ header{
         }
 }
 
-/*************Partie "Explorer nos restauran" *************/
+/*************Partie "Explorer nos restaurants" *************/
 
 .explorer{
     display: flex;
@@ -483,6 +483,10 @@ display: none;
 
 .menu_list {
     padding-bottom: 20px;
+    margin: auto;
+    min-width: 670px;
+    max-width: 700px;
+    background-color: var(--light_grey);
 }
 .entrees {
     display: flex;
