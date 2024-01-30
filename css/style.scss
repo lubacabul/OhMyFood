@@ -483,10 +483,6 @@ display: none;
 
 .menu_list {
     padding-bottom: 20px;
-    margin: auto;
-    min-width: 670px;
-    max-width: 700px;
-    background-color: var(--light_grey);
 }
 .entrees {
     display: flex;
@@ -717,9 +713,16 @@ display: none;
     background-color: var(--light_grey);
     margin: auto;
 }
-
+.menu_list {
+    padding-bottom: 20px;
+    margin: auto;
+    min-width: 670px;
+    max-width: 700px;
+    background-color: var(--light_grey);
+    
 .button {
     padding-bottom: 50px;
+}
 }
 }
 
@@ -789,7 +792,14 @@ display: none;
         left: 30px;
     }
 
+    .menu_list {
+    padding-bottom: 20px;
+    margin: auto;
+    min-width: 670px;
+    max-width: 700px;
+    background-color: var(--light_grey);
     
+}
 }
 
 /************LOADER*************/
